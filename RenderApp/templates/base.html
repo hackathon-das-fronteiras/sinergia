@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+<head>
+    {% load static %}
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href={% static "img/fav.png"%}>
+    <!-- Author Meta -->
+    <meta name="author" content="codepixer">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Descartar Consciente | Sustentabilidade</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href={% static "css/style.css"%}>
+        <link rel="stylesheet" href={% static "css/linearicons.css"%}>
+        <link rel="stylesheet" href={% static "css/font-awesome.min.css"%}>
+        <link rel="stylesheet" href={% static "css/bootstrap.css"%}>
+        <link rel="stylesheet" href={% static "css/magnific-popup.css"%}>
+        <link rel="stylesheet" href={% static "css/nice-select.css"%}>					
+        <link rel="stylesheet" href={% static "css/animate.min.css"%}>
+        <link rel="stylesheet" href={% static "css/owl.carousel.css"%}>
+        <link rel="stylesheet" href={% static "css/main.css"%}>
+        {% block style %}{% endblock %}
+    </head>
+    <body>
+
+        {% block menu %}
+          <header id="header" id="home">
+            <div class="container">
+                <div class="row align-items-center justify-content-between d-flex">
+                  <div id="logo">
+                    <a href="{% url 'home'%}"><img src={% static "img/logo.png"%} alt="" title="" /></a>
+                  </div>
+                  <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                      <li class="menu-active"><a href="{% url 'home'%}">Inicio</a></li>				    
+                      <li class="foco"><a href="{% url 'cad_fornecedor'%}">Fornecedor de Resíduos</a></li>
+                      <li class="foco"><a href="{% url 'cad_empresa'%}">Cadastro de Empresas</a></li>
+                      <li class="menu-has-children"><a href="">Serviços</a>
+                        <ul>
+                          <li><a href="{% url 'cad_fornecedor'%}">Cadastro do Fornecedor</a></li>
+                          <li><a href="">Econôma Consciente</a></li>
+                          <li><a href="{% url 'consulta_residuos'%}">Consultar Resíduos Descartáveis</a></li>
+                          <li><a href="{% url 'cad_empresa'%}">Cadastre sua Empresa</a></li>							  
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav><!-- #nav-menu-container -->		    		
+                </div>
+            </div>
+          </header><!-- #header -->
+        {% endblock %}
+        
+        {% block content %}
+        <!-- start banner Area -->
+        <section class="banner-area" id="home">	
+            <div class="container">
+                <div class="row fullscreen d-flex align-items-center justify-content-center">
+                    <div class="banner-content col-lg-7">
+                        <h1>
+                            Descarte Consciente	
+                        </h1>
+                        <p class="pt-20 pb-20">
+                            Informe em nosssa plataforma grátis seus lixos descartáveis e empresas coletadoras entraram em contato para direcionar e pagar por eles.
+                        </p>
+                    </div>											
+                </div>
+            </div>
+        </section>
+        <!-- End banner Area -->
+
+        <!-- Start we-offer Area -->
+        <section class="we-offer-area section-gap" id="offer">
+            <div class="container"><br>
+                <div class="row d-flex justify-content-center">
+                    <div class="menu-content pb-60 col-lg-10">
+                        <div class="title text-center">
+                            <h1 class="mb-10">Principais Serviços</h1>
+                            <p>Seja um descartador consciente, cadastre seus lixos descartáveis em nossa plataforma que em breve coletadoras entraram em contato.</p>
+                        </div>
+                    </div>
+                </div>						
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="single-offer d-flex flex-row pb-30">
+                            <div class="icon">
+                                <img width="95" height="80" src="https://www.abf.com.br/wp-content/uploads/2015/07/conselho-icone.png" alt="">
+                            </div>
+                            <div class="desc">
+                                <a href="{% url 'cad_fornecedor'%}"><h4>Fornecedor de Resíduos</h4></a>
+                                <p>Anuncie aqui seus resíduos, ficando visível para que empresas coletadoras possam consulta e comprar resíduos.</p>
+                            </div>
+                        </div>
+                        <div class="single-offer d-flex flex-row pb-30">
+                            <div class="icon">
+                                <img src="https://static.wixstatic.com/media/495fca_1a34f027add44bf2a0633d32042056d8~mv2.png/v1/fill/w_68,h_68,al_c,q_80,usm_0.66_1.00_0.01/495fca_1a34f027add44bf2a0633d32042056d8~mv2.webp" alt="">
+                            </div>
+                            <div class="desc">
+                                <a href=""><h4>Econômia Consciente</h4></a>
+                                <p>Saiba como ganhar dinheiro com nossa plataforma transformando lixo em dinheiro.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-offer d-flex flex-row pb-30">
+                            <div class="icon">
+                                <img width="95" height="80" src="http://limpcon.com.br/wp-content/uploads/2015/09/Entenda-a-melhor-maneira-de-fazer-o-descarte-de-lixo-em-sua-empresa.png" alt="">
+                            </div>
+                            <div class="desc">
+                                <a href="{% url 'consulta_residuos'%}"><h4>Consultar Resíduos Descartáveis</h4></a>
+                                <p>Consulte todos os tipos de resíduos descartáveis em nossa plataforma.</p>
+                            </div>
+                        </div>
+                        <div class="single-offer d-flex flex-row pb-30">
+                            <div class="icon">
+                                <img width="80" height="90" src="https://mundogeo.com/wp-content/uploads/2011/05/Empresas.jpg" alt="">
+                            </div>
+                            <div class="desc">
+                                <a href="{% url 'cad_empresa'%}"><h4>Cadastre sua empresa aqui</h4></a>
+                                <p>Informe dados e ramo da sua empresa aqui.</p>
+                            </div>
+                        </div>
+                    </div>												
+                </div>
+            </div>	
+        </section>
+        <!-- End we-offer Area -->
+        
+        <!-- Start testomial Area -->
+        <section class="testomial-area section-gap">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="menu-content pb-60 col-lg-8"><br>
+                        <div class="title text-center">
+                            <h1 class="mb-10">Apoiadores</h1>
+                            <p>Principais parceiras no ramo de resíduos sustentáveis.</p>
+                        </div>
+                    </div>
+                </div>						
+                <div class="row">
+                    <div class="active-tstimonial-carusel">
+                        {% for apoiador in apoiadores %}
+                        <div class="single-testimonial item">
+                            <img class="mx-auto" width="80" height="80" src="media/{{apoiador.image}}" alt="">
+                            <p class="desc">{{apoiador.descricao}}</p>
+                            <h4>{{apoiador.nome}}</h4>
+                            <p>{{apoiador.funcao}}</p>
+                        </div>
+                        {% endfor %}                                                                            
+                    </div>
+                </div>
+            </div>	
+        </section>
+        <!-- End testomial Area -->
+        {% endblock %}
+
+        {% block footer %}
+        <!-- start footer Area -->		
+        <footer class="footer-area section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3  col-md-12">
+                        <div class="single-footer-widget">
+                            <h6>Top Products</h6>
+                            <ul class="footer-nav">
+                                <li><a href="{% url 'cad_fornecedor' %}">Cadastro do Fornecedor</a></li>
+                                <li><a href="">Econômia Consciente</a></li>
+                                <li><a href="">Consulta residuos</a></li>
+                                <li><a href="">Cadastre sua Empresa</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  col-md-12">
+                        <div class="single-footer-widget newsletter">
+                            <h6>Fique por dentro</h6>
+                            {% if messages %}
+                                {% for message in messages %}
+                                <ul class="messages"><span style="color: #417690"><li class="{{ message.tags }}">{{message}}</li></ul>                             
+                                {% endfor %}
+                            {% endif %}
+                            <p>Fique por dentro de todas nossas atividades e eventos.</p>
+                            <div id="mc_embed_signup">
+                                <form method="POST" class="form-inline">
+                                    {% csrf_token %}
+                                    <div class="form-group row" style="width: 100%">
+                                        <div class="col-lg-8 col-md-12">
+                                            <input name="email" placeholder="Digite seu Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                                            <div style="position: absolute; left: -5000px;">
+                                                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                                            </div>
+                                        </div>                                
+                                        <div class="col-lg-4 col-md-12">
+                                            <button type="submit" class="nw-btn primary-btn">Aceitar<span class="lnr lnr-arrow-right"></span></button>
+                                        </div> 
+                                    </div>		
+                                    <div class="info"></div>
+                                </form>
+                            </div>		
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-12">
+                        <div class="single-footer-widget mail-chimp">
+                            <h6 class="mb-20">Facebook Feed</h6>
+                            <ul class="instafeed d-flex flex-wrap">
+                                <!-- <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDescartecelulares%2Fposts%2F1113299452057565&width=500" width="500" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>									
+                                 -->
+                            </ul>
+                        </div>
+                    </div>						
+                </div>
+
+                <div class="row footer-bottom d-flex justify-content-between">
+                    <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos direitos reservados | <i class="fa fa-heart-o" aria-hidden="true"></i> por <a href="" target="">Descartar Consciente</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                    <div class="col-lg-4 col-sm-12 footer-social">
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>					
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End footer Area -->		
+        {% endblock %}
+
+        {% block scripts %}
+        <script src={% static "js/vendor/jquery-2.2.4.min.js"%}></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src={% static "js/vendor/bootstrap.min.js"%}></script>			
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+          <script src={% static "js/easing.min.js"%}></script>			
+        <script src={% static "js/hoverIntent.js"%}></script>
+        <script src={% static "js/superfish.min.js"%}></script>	
+        <script src={% static "js/jquery.ajaxchimp.min.js"%}></script>
+        <script src={% static "js/jquery.magnific-popup.min.js"%}></script>	
+        <script src={% static "js/owl.carousel.min.js"%}></script>			
+        <script src={% static "js/jquery.sticky.js"%}></script>
+        <script src={% static "js/jquery.nice-select.min.js"%}></script>			
+        <script src={% static "js/parallax.min.js"%}></script>		
+        <script src={% static "js/mail-script.js"%}></script>	
+        <script src={% static "js/main.js"%}></script>	
+        {% endblock %}
+    </body>
+</html>
+
+
+

@@ -1,0 +1,21 @@
+/**
+    ** Styles css
+*/
+li.foco {
+    background: greenyellow;
+}
+.row.d-flex.justify-content-center.plans{
+    margin-bottom: -6%!important;
+}
+.section-top-border {
+    padding: 20px 0;
+}
+.section-top-border.form {
+    padding: 20px 0!important;
+}
+.section-top-border {
+    padding-bottom: 10px!important;
+}
+.form-control{
+    background-color: #f9f9ff!important;
+}

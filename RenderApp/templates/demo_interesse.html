@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+
+{% load static %}
+
+{% load bootstrap4 %}
+
+{% block style %} <link rel="stylesheet" href={% static "/css/cards.css"%}> {% endblock %}
+
+{% block content %}
+    
+    <div class="whole-wrap">
+        
+        <div class="container">
+        <div class="section-top-border">  <br>
+            <hr>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="box">
+                            <div class="img">                                
+                                <img src="/media/{{residuo.image}}"}>                                
+                            </div>
+                            <h2>{{residuo.residuos}} <br><span>{{residuo.tipo_residuos}}</span></h2>
+                            <p> 
+                                Resíduo {{residuo.residuos}},tipos de resíduo {{residuo.tipo_residuos}} com volume total de {{residuo.volume_produto}}.
+                            </p>
+                            <span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}                        
+                        <br><h3><caption>Dados Empresa</caption></h3><br>                    
+                        <div class="mt-10">
+                            <input type="text" name="nome_empresa" placeholder="Nome Empresa" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome Empresa'" required class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="text" name="email" placeholder="Email Endereço" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Endereço'" required class="single-input">
+                        </div>
+                        <div class="button-group-area mt-10 text-left">
+                            <a href="{% url 'consulta_residuos'%}" class="genric-btn success-border e-large">Voltar</a>
+                            <button type="submit" class="genric-btn primary-border e-large">Confirmar</button>
+                        </div><br>
+                    </form>
+                </div>
+            </div>
+            <hr>
+        </div>
+        </div>
+    </div>
+
+{% endblock %}

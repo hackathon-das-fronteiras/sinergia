@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+
+{% block content %}
+
+    <div class="whole-wrap">
+        
+        <div class="container">
+        <div class="section-top-border">  <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <blockquote class="generic-blockquote">
+                        <p>{{title}}</p>
+                        “Caro cliente informe todos os seus dados conforme indicado a baixo no formulário, após seu cadastro ser efetuado no sistema você será contactado quando empresas estiverem interessadas no seus redíduos ” 
+                    </blockquote>
+                </div>
+            </div>
+        </div>        
+        {% if messages %}
+            <ul class="messages">
+            {% for message in messages %}
+                <span style="color: #417690"><li class="{{ message.tags }}">{{ message }}</li></span>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        <div class="section-top-border form">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <h3 class="mb-30">{{title}}:</h3>
+                        <p>{{status}}</p>
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {% bootstrap_form forms %}                           
+                            {% block buttons %}
+                            <div class="button-group-area mt-10 text-right">
+                                <a href="{% url 'home'%}" class="genric-btn success-border e-large">Voltar</a>
+                                <button type="submit" class="genric-btn primary-border e-large">Salvar</button>
+                            </div><br>
+                            {% endblock %}
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
